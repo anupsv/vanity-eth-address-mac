@@ -1,0 +1,16 @@
+[package]
+name = "vanity_address_generator"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+secp256k1 = { version = "0.24", features = ["rand"] }
+rand = "0.8"
+ethers = { version = "2.0", default-features = false, features = ["rustls"] }
+hex = "0.4"
+metal = "0.25" # Ensure this is the latest version
+objc = "0.2"   # Required for Objective-C interoperability
+rayon = "1.6"  # Data parallelism library
+once_cell = "1.17" # For thread-safe, lazy initialization if needed
+ctrlc = "3.2"
